@@ -1,0 +1,10 @@
+<% @posts.each do | p | %>
+	<div class="post">
+		<h2><%= p.title %></h2>
+		<p><%= p.content %></p>
+		<i>
+			Tagged:
+			<div class="tags"><%= p.tags.collect{|t|t.name}.join(", ") %></div>
+		</i>
+	</div>
+<% end %>
